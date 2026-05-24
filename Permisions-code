@@ -1,0 +1,216 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>TerraGuard - Permissions</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#3c4a45",
+                    "surface-container-highest": "#2a344d",
+                    "on-tertiary-fixed-variant": "#374767",
+                    "surface-variant": "#2a344d",
+                    "primary": "#ffffff",
+                    "on-tertiary": "#20304f",
+                    "on-primary": "#00382d",
+                    "surface-container-high": "#1f2942",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#abb9d6",
+                    "primary-fixed-dim": "#38debb",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-secondary-fixed": "#0d1c32",
+                    "on-background": "#d9e2ff",
+                    "on-surface": "#d9e2ff",
+                    "surface-container-low": "#101b33",
+                    "surface-container": "#151f37",
+                    "on-secondary": "#233148",
+                    "on-primary-fixed": "#002019",
+                    "background": "#08132a",
+                    "tertiary": "#ffffff",
+                    "on-tertiary-container": "#556486",
+                    "inverse-on-surface": "#263049",
+                    "secondary": "#b9c7e4",
+                    "error-container": "#93000a",
+                    "primary-container": "#5ffbd6",
+                    "on-surface-variant": "#bacac3",
+                    "secondary-fixed": "#d6e3ff",
+                    "inverse-surface": "#d9e2ff",
+                    "tertiary-container": "#d8e2ff",
+                    "secondary-container": "#3c4962",
+                    "tertiary-fixed": "#d8e2ff",
+                    "on-tertiary-fixed": "#091b39",
+                    "outline": "#85948e",
+                    "surface-bright": "#2f3952",
+                    "surface-dim": "#08132a",
+                    "surface-tint": "#38debb",
+                    "tertiary-fixed-dim": "#b6c6ed",
+                    "on-primary-fixed-variant": "#005142",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "inverse-primary": "#006b58",
+                    "on-primary-container": "#00725e",
+                    "surface": "#08132a",
+                    "primary-fixed": "#5ffbd6",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#030d25"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap": "12px",
+                    "container-padding": "20px",
+                    "stack-gap": "16px",
+                    "safe-area-bottom": "34px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "data-mono": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-sm-mobile": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm-mobile": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-lg-mobile": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(17, 34, 64, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .cyan-glow {
+            box-shadow: 0 0 15px 0 rgba(56, 222, 187, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #08132a;
+            overscroll-behavior: none;
+        }
+        .active-dot {
+            width: 24px;
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body class="font-body-lg-mobile text-on-background selection:bg-primary-fixed/30 antialiased overflow-hidden">
+<!-- Top App Bar (Suppressing Shell as per Transactional/Onboarding Rule) -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-center px-container-padding py-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+<span class="font-headline-md-mobile text-headline-md-mobile tracking-widest text-primary uppercase">TERRAGUARD</span>
+</div>
+</header>
+<main class="relative h-screen w-full flex flex-col items-center justify-between px-container-padding pt-24 pb-safe-area-bottom">
+<!-- Hero Section -->
+<section class="flex-1 flex flex-col items-center justify-center w-full max-w-md mx-auto">
+<div class="relative w-full aspect-square mb-stack-gap flex items-center justify-center">
+<!-- Floating Glass Glow Effect -->
+<div class="absolute inset-0 bg-primary-fixed-dim/5 rounded-full blur-3xl"></div>
+<img alt="Notification and location permission illustration" class="w-4/5 h-4/5 object-contain z-10 animate-[bounce_6s_ease-in-out_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmf3z71wdllOZS0uKRQAqV_LF6mVGhSEglBCFzb4t5MTDq9zAM7LXWm1LgqfHwr1Jxlfirm5jtEGoApEQ5eqT-s4AzUWB6897f72RjmZwxpdQVZpbG0ViEOv9XIjq5fk8qe1ny37cmerzyU14Oror-SLihNTL64qJKzfDKiD1eqoheM9DXoDBr_-XkyH-1IaFrihhFtdEYoV-9qGlkS3pgo9fpDKQ9ZeH9yk2BKKKbA0TtdOB3oSj2Lkd9C4tI9-UnFlx_zYryOxGK">
+</div>
+<!-- Typography Content -->
+<div class="text-center space-y-4 px-4">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">
+                    Enable Smart Alerts
+                </h1>
+<p class="font-body-lg-mobile text-body-lg-mobile text-on-surface-variant max-w-[280px] mx-auto leading-relaxed">
+                    Allow notifications and location access to receive nearby emergency alerts.
+                </p>
+</div>
+</section>
+<!-- Action Section -->
+<section class="w-full max-w-md space-y-4 mb-12">
+<!-- Permission Toggles / Buttons -->
+<button class="glass-card group w-full flex items-center justify-between p-5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" onclick="togglePermission(this, 'notifications')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim group-[.active]:bg-primary-fixed-dim group-[.active]:text-on-primary">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<span class="font-headline-sm-mobile text-headline-sm-mobile text-primary">Enable Notifications</span>
+</div>
+<div class="w-12 h-6 rounded-full bg-surface-container-highest relative transition-colors duration-300 group-[.active]:bg-primary-fixed-dim">
+<div class="absolute top-1 left-1 w-4 h-4 rounded-full bg-outline transition-transform duration-300 group-[.active]:translate-x-6 group-[.active]:bg-on-primary"></div>
+</div>
+</button>
+<button class="glass-card group w-full flex items-center justify-between p-5 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]" onclick="togglePermission(this, 'location')">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim group-[.active]:bg-primary-fixed-dim group-[.active]:text-on-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<span class="font-headline-sm-mobile text-headline-sm-mobile text-primary">Share Location</span>
+</div>
+<div class="w-12 h-6 rounded-full bg-surface-container-highest relative transition-colors duration-300 group-[.active]:bg-primary-fixed-dim">
+<div class="absolute top-1 left-1 w-4 h-4 rounded-full bg-outline transition-transform duration-300 group-[.active]:translate-x-6 group-[.active]:bg-on-primary"></div>
+</div>
+</button>
+<!-- Final Action -->
+<button class="w-full mt-6 py-4 rounded-xl bg-primary text-on-primary font-headline-sm-mobile text-headline-sm-mobile cyan-glow transition-all active:scale-95">
+                Complete Setup
+            </button>
+<button class="w-full py-2 text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors">
+                NOT NOW, I'LL DO IT LATER
+            </button>
+</section>
+<!-- Pagination Dots -->
+<footer class="w-full flex justify-center gap-2 pb-8">
+<div class="h-2 w-2 rounded-full bg-outline-variant transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-outline-variant transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-outline-variant transition-all duration-300"></div>
+<div class="h-2 active-dot rounded-full bg-primary transition-all duration-300 shadow-[0_0_10px_rgba(255,255,255,0.4)]"></div>
+</footer>
+</main>
+<script>
+        function togglePermission(btn, type) {
+            btn.classList.toggle('active');
+            
+            // Haptic feedback simulation
+            if (window.navigator.vibrate) {
+                window.navigator.vibrate(10);
+            }
+
+            // Small animation trigger
+            const icon = btn.querySelector('.material-symbols-outlined');
+            icon.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                icon.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        // Floating animation logic
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const hero = document.querySelector('img');
+            if(hero) {
+                hero.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+            }
+        });
+    </script>
+</body></html>
