@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>TerraGuard - Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#3c4a45",
+                        "surface-container-highest": "#2a344d",
+                        "on-tertiary-fixed-variant": "#374767",
+                        "surface-variant": "#2a344d",
+                        "primary": "#ffffff",
+                        "on-tertiary": "#20304f",
+                        "on-primary": "#00382d",
+                        "surface-container-high": "#1f2942",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#abb9d6",
+                        "primary-fixed-dim": "#38debb",
+                        "on-secondary-fixed-variant": "#39475f",
+                        "on-secondary-fixed": "#0d1c32",
+                        "on-background": "#d9e2ff",
+                        "on-surface": "#d9e2ff",
+                        "surface-container-low": "#101b33",
+                        "surface-container": "#151f37",
+                        "on-secondary": "#233148",
+                        "on-primary-fixed": "#002019",
+                        "background": "#08132a",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-container": "#556486",
+                        "inverse-on-surface": "#263049",
+                        "secondary": "#b9c7e4",
+                        "error-container": "#93000a",
+                        "primary-container": "#5ffbd6",
+                        "on-surface-variant": "#bacac3",
+                        "secondary-fixed": "#d6e3ff",
+                        "inverse-surface": "#d9e2ff",
+                        "tertiary-container": "#d8e2ff",
+                        "secondary-container": "#3c4962",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed": "#091b39",
+                        "outline": "#85948e",
+                        "surface-bright": "#2f3952",
+                        "surface-dim": "#08132a",
+                        "surface-tint": "#38debb",
+                        "tertiary-fixed-dim": "#b6c6ed",
+                        "on-primary-fixed-variant": "#005142",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#b9c7e4",
+                        "inverse-primary": "#006b58",
+                        "on-primary-container": "#00725e",
+                        "surface": "#08132a",
+                        "primary-fixed": "#5ffbd6",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#030d25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "element-gap": "12px",
+                        "container-padding": "20px",
+                        "stack-gap": "16px",
+                        "safe-area-bottom": "34px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "data-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "data-mono": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #08132a;
+            color: #d9e2ff;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
+        }
+        .glass-card {
+            background: rgba(17, 34, 64, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .cyan-glow {
+            box-shadow: 0 0 15px rgba(56, 222, 187, 0.3);
+        }
+        .hero-animation {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; filter: brightness(1.2); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(56, 222, 187, 0.15) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(32, 48, 79, 0.4) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col items-center justify-between font-body-lg text-body-lg">
+<!-- Top Navigation Anchor (Shared Component Mapping) -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-center px-container-padding py-4 w-full bg-transparent">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">satellite_alt</span>
+<h1 class="font-headline-md-mobile text-headline-md-mobile tracking-widest text-primary uppercase">TERRAGUARD</h1>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full flex flex-col items-center justify-center px-container-padding pt-24 pb-safe-area-bottom">
+<!-- Hero Section -->
+<div class="relative w-full aspect-square max-w-[320px] flex items-center justify-center mb-12">
+<div class="absolute inset-0 bg-primary-fixed-dim/10 rounded-full blur-[60px] animate-pulse"></div>
+<img alt="Celebratory 3D checkmark in a glowing ring" class="hero-animation relative z-10 w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxkCFTfyJ7ZSB_RS-JFTluxeqOMWn2ONihwgVpeKwt4RyR7rWBP4HGF4tD68O5gNjaYk7YWdb6EQzOiQDR5marLFbIlQCf6xwH1A0L07Zsuqk5_r9gmpUyOsaJDHaXJPofK-wzQqL4knf_HRlrYn1x4HdDA9CQ1VFX2-dFFTopcqgF6SaNZa4u07Uxr04ui57dT1EdrEHHrv1ueSARMKvMn0aFerRO3aCFPxI9WOnLHfBp-S3Ma2qDWxzgjn5R72Ro5OhLmUw4vnsj" style="filter: drop-shadow(0 0 30px rgba(56, 222, 187, 0.4));">
+</div>
+<!-- Text Content -->
+<div class="text-center space-y-4 mb-16">
+<h2 class="font-display-lg text-display-lg text-primary tracking-tight">You’re All Set</h2>
+<p class="font-body-lg text-on-surface-variant max-w-[280px] mx-auto opacity-80">
+                TerraGuard is ready to protect and inform you with real-time satellite intelligence.
+            </p>
+</div>
+<!-- Action Section -->
+<div class="w-full max-w-sm space-y-stack-gap">
+<button class="w-full py-4 px-8 rounded-xl bg-primary-fixed-dim text-on-primary-fixed font-headline-sm text-headline-sm-mobile cyan-glow transition-all active:scale-95 hover:brightness-110 flex items-center justify-center gap-3">
+<span>Explore Dashboard</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full py-4 px-8 rounded-xl glass-card text-primary font-body-lg transition-all active:opacity-70 hover:bg-surface-container-high">
+                View Settings
+            </button>
+</div>
+</main>
+<!-- Pagination Dots (Success screen suppression logic applied to shell, replaced by status indicator) -->
+<footer class="pb-safe-area-bottom mb-8">
+<div class="flex items-center justify-center gap-3">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-4 h-2 rounded-full bg-primary-fixed-dim shadow-[0_0_8px_rgba(56,222,187,0.5)]"></div>
+</div>
+</footer>
+<!-- Interactive Background Particles -->
+<canvas class="fixed inset-0 pointer-events-none z-[-1]" id="atmosphere" width="390" height="861"></canvas>
+<script>
+        const canvas = document.getElementById('atmosphere');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.2;
+                this.speedY = (Math.random() - 0.5) * 0.2;
+                this.opacity = Math.random() * 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+            draw() {
+                ctx.fillStyle = `rgba(100, 255, 218, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            resize();
+            for (let i = 0; i < 50; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        init();
+        animate();
+    </script>
+</body></html>
